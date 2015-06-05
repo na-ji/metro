@@ -1,0 +1,56 @@
+<template name="afQuickField_metro">
+	{{#if isGroup atts=this}}
+		{{> afObjectField_materialize }}
+	{{else}}
+		{{#if isFieldArray atts=this}}
+			{{> afArrayField_materialize }}
+		{{else}}
+			{{> afFormGroup groupAtts}}
+		{{/if}}
+	{{/if}}
+</template>
+
+<template name="afFormGroup_metro">
+	<div class="input-field radio-group">
+		{{#if skipLabel}}
+			{{> afFieldInput this.afFieldInputAtts}}
+		{{else}}
+			{{> afLabel_metro }}
+			{{> afFieldInput this.afFieldInputAtts}}
+		{{/if}}
+		{{#if afFieldIsInvalid name=this.name}}
+			<div class="red-text">
+				<i class="mdi-alert-warning"></i> {{{afFieldMessage name=this.name}}}
+			</div>
+		{{/if}}
+	</div>
+	<br />
+</template>
+
+<template name="afRadioGroup_metro">
+	<div class="af-radio-group" {{dsk}}>
+		{{#each this.items}}
+		<p>
+			<input class="with-gap" type="radio" value="{{this.value}}" {{itemAtts}} />
+			<label for="{{itemAtts.id}}">{{this.label}}</label>
+		</p>
+		{{/each}}
+	</div>
+</template>
+
+<template name="afRadio_metro">
+	<p>
+		<input type="radio" value="{{this.value}}" {{atts}} />
+		<label for="{{atts.id}}">{{afFieldLabelText name=this.name}}</label>
+	</p>
+</template>
+
+<template name="afLabel_metro">
+	<label for="{{atts.id}}" class="label-reset" {{atts}}>
+		{{#if this.labelText}}
+			{{this.labelText}}
+		{{else}}
+			{{afFieldLabelText name=this.name}}
+		{{/if}}
+	</label>
+</template>

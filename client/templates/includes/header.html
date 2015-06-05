@@ -3,15 +3,15 @@
 		<div class="nav-wrapper">
 			<div class="row">
 				<div class="col s12">
-					<a href="#!" class="brand-logo">Metro</a>
-					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+					<a href="{{pathFor 'index'}}" class="brand-logo">Metro</a>
+					<a href="#" data-activates="mobile-side" class="button-collapse">
+						<i class="mdi-navigation-menu"></i>
+					</a>
 					<ul class="right hide-on-med-and-down">
-						<li><a href="#">Produits</a></li>
-						<li><a href="#">Liste de Course</a></li>
+						{{> menu}}
 					</ul>
-					<ul class="side-nav" id="mobile-demo">
-						<li><a href="#">Produits</a></li>
-						<li><a href="#">Liste de Course</a></li>
+					<ul class="side-nav" id="mobile-side">
+						{{> menu}}
 					</ul>
 				</div>
 			</div>

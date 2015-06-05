@@ -1,0 +1,15 @@
+<template name="productAdd">
+	{{#autoForm collection="Products" id="insertProductForm" type="insert"}}
+		{{> afQuickField name='name'}}
+		{{> afQuickField name='vat' options=vatChoices template="metro"}}
+		{{> afQuickField name='price'}}
+		{{> afQuickField name='unit' options=unitChoices template="metro"}}
+		{{> afQuickField name='type'}}
+		<div class="col s12">
+			<button class="btn waves-effect waves-light" type="submit" name="action">
+				Ajouter
+				<i class="mdi-content-send right"></i>
+			</button>
+		</div>
+	{{/autoForm}}
+</template>
