@@ -1,3 +1,16 @@
 <template name="productItem">
-	<li>{{name}}</li>
+	<div class="col s12 m6">
+		<div class="card medium">
+			<div class="card-image">
+				<img src="http://lenervee.com/wp-content/uploads/2014/10/twix-packaging.png">
+				<span class="card-title">{{name}}</span>
+			</div>
+			<div class="card-content">
+				<p>{{priceWithVat}}</p>
+			</div>
+			<div class="card-action">
+				<a href="#">Editer</a>
+			</div>
+		</div>
+	</div>
 </template>

@@ -1,9 +1,9 @@
 <template name="productsList">
-	<ul>
+	<div class="row">
 		{{#each products}}
 			{{> productItem}}
 		{{/each}}
-	</ul>
+	</div>
 	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
 		<a class="btn-floating btn-large waves-effect waves-light red" href="{{pathFor 'productAdd'}}">
 			<i class="mdi-content-add"></i>
