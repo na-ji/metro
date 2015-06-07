@@ -1,0 +1,12 @@
+<template name="caddiesList">
+	<div class="row">
+		{{#each caddies}}
+			{{> caddieItem}}
+		{{/each}}
+	</div>
+	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+		<a class="btn-floating btn-large waves-effect waves-light yellow darken-2" href="{{pathFor 'caddieAdd'}}">
+			<i class="material-icons">add</i>
+		</a>
+	</div>
+</template>

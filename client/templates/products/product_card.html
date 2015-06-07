@@ -1,0 +1,16 @@
+<template name="productCard">
+	<div class="col s12 l6">
+		<div class="card-panel card-with-image">
+			<div class="row">
+				<div class="col s4">
+					<img class="img-card" src="{{image.url}}">
+				</div>
+				<div class="col s8">
+					<b>{{name}}</b>
+					<p>{{priceWithVat}} € / {{unit}}</p>
+					<a href="{{pathFor 'productUpdate'}}">Editer</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

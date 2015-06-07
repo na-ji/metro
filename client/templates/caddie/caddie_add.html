@@ -1,0 +1,6 @@
+<template name="caddieAdd">
+	<h3>Ajouter un caddie</h3>
+	{{#autoForm collection="Caddies" id="insertCaddieForm" type="insert"}}
+		{{> caddieForm action="Ajouter" products=false}}
+	{{/autoForm}}
+</template>

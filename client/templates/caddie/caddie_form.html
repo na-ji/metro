@@ -1,0 +1,14 @@
+<template name="caddieForm">
+	{{#if products }}
+		{{> afQuickField name='product' options=productChoices}}
+		{{> afQuickField name='quantity'}}
+	{{else}}
+		{{> afQuickField name='name'}}
+	{{/if}}
+	<div>
+		<button class="btn waves-effect waves-light" type="submit" name="action">
+			{{action}}
+			<i class="material-icons">send</i>
+		</button>
+	</div>
+</template>

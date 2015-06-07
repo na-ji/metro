@@ -7,3 +7,25 @@ div.file-field.input-field + label {
 div.file-field a.file-upload-clear.waves-effect.waves-light.btn {
 	position: relative;
 }
+img.img-card {
+	width: 120px;
+	height: 120px;
+}
+div.card-with-image {
+	padding: 0 20px 0 0;
+}
+div.card-with-image > div.row {
+	margin: 0;
+}
+div.card-with-image div.col.s4, img.img-card {
+	padding: 2px;
+	height: 120px;
+}
+img.image-row {
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+}
+img.image-row + span {
+	margin-bottom: 2px;
+}
