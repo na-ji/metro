@@ -1,3 +1,5 @@
 Template.header.rendered = function() {
-	$(".button-collapse").sideNav();
+	$(".button-collapse").sideNav({
+		closeOnClick: true
+	});
 };
