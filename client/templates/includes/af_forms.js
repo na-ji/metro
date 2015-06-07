@@ -10,3 +10,15 @@ Template.fileThumbImg_meteor.inheritsHelpersFrom("fileThumbImg");
 Template.fileThumbImg_meteor.inheritsEventsFrom("fileThumbImg");
 Template.fileThumbImg_meteor.inheritsHooksFrom("fileThumbImg");
 Template.fileThumbImg_meteor.replaces("fileThumbImg");
+
+Template.afRadioGroup_metro.helpers({
+	itemAtts: function() {
+		var atts;
+		atts = _.clone(this.atts);
+		atts.id = atts.id + "_" + this._id;
+		if (this.selected) {
+			atts.checked = 'checked';
+		}
+		return atts;
+	}
+});

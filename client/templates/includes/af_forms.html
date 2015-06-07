@@ -38,13 +38,6 @@
 	</div>
 </template>
 
-<template name="afRadio_metro">
-	<p>
-		<input type="radio" value="{{this.value}}" {{atts}} />
-		<label for="{{atts.id}}">{{afFieldLabelText name=this.name}}</label>
-	</p>
-</template>
-
 <template name="afLabel_metro">
 	<label for="{{atts.id}}" class="label-reset" {{atts}}>
 		{{#if this.labelText}}
@@ -56,7 +49,7 @@
 </template>
 
 <template name="afFileUpload_meteor">
-	<label class="label-reset">{{label}}</label>
+	<label class="label-reset">Photo</label>
 	<div class="form-group file-upload file-field input-field">
 		{{#if fileUpload}}
 			<div class="row">
@@ -66,7 +59,7 @@
 					{{/with}}
 					<br />
 					<a class="file-upload-clear waves-effect waves-light btn" file-input="{{name}}">
-						<i class="mdi-action-highlight-remove left"></i> {{removeLabel}}
+						<i class="mdi-action-highlight-remove left"></i> Retirer
 					</a>
 					<br />
 					<br />
