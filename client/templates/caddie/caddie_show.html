@@ -1,5 +1,5 @@
 <template name="caddieShow">
-	<h3>{{name}}</h3>
+	<h4>{{name}}</h4>
 	{{#unless products }}
 		Aucun produits
 	{{else}}
@@ -28,7 +28,8 @@
 	{{/unless}}
 	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
 		<a class="btn-floating btn-large waves-effect waves-light yellow darken-2" href="{{pathFor 'caddieAddProduct'}}">
-			<i class="material-icons">add</i>
+			<!-- <i class="material-icons">add</i> -->
+			<i class="material-icons">&#xE145;</i>
 		</a>
 	</div>
 </template>

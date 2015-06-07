@@ -29,3 +29,6 @@ img.image-row {
 img.image-row + span {
 	margin-bottom: 2px;
 }
+body {
+	background-color: #eeeeee;
+}

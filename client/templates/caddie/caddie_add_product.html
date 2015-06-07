@@ -1,5 +1,5 @@
 <template name="caddieAddProduct">
-	<h3>Ajouter un produit à {{name}}</h3>
+	<h4>Ajouter un produit à {{name}}</h4>
 	{{#autoForm collection="Caddies" doc=this id="insertCaddieProductForm" type="update-pushArray" scope="products"}}
 		{{> caddieForm action="Ajouter" products=true}}
 	{{/autoForm}}
