@@ -1,3 +1,9 @@
 .input-field label.label-reset {
 	position: relative;
 }
+div.file-field.input-field + label {
+	display: none;
+}
+div.file-field a.file-upload-clear.waves-effect.waves-light.btn {
+	position: relative;
+}
