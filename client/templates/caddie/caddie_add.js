@@ -1,6 +1,6 @@
 AutoForm.addHooks('insertCaddieForm', {
-	onSuccess: function(operation, result, template) {
+	onSuccess: function() {
 		Materialize.toast('Votre caddie a bien été ajouté !', 4000);
-		Router.go("/caddies");
+		Router.go("caddiesList");
 	}
 });
