@@ -6,6 +6,9 @@ Template.productRow.helpers({
 	priceWithVat: function() {
 		return priceWithVat(this.product);
 	},
+	unitPrice: function() {
+		return ((priceWithVat(this.product)) / this.product.unitNumber).toFixed(2);
+	},
 	image: function() {
 		return Images.findOne(this.product.picture);
 	},
