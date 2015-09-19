@@ -1,6 +1,6 @@
 <template name="productRow">
 	<tr>
-		<td class="valign-wrapper"><img src="{{image.url}}" class="image-row"><span>{{product.name}}</span></td>
+		<td class="valign-wrapper"><img src="{{image.url}}" class="image-row"><span><a href="{{pathFor 'caddieProductUpdate' _id=caddie_id index=index}}">{{product.name}}</a></span></td>
 		<td>{{product.price}}</td>
 		<td>{{priceWithVat}}</td>
 		<td>{{unitPrice}}</td>

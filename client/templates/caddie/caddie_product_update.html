@@ -1,0 +1,6 @@
+<template name="caddieProductUpdate">
+	<h4>Editer un produit de {{name}}</h4>
+	{{#autoForm collection="Caddies" doc=this id="updateCaddieProductForm" type="update" setArrayItems=true}}
+		{{> caddieForm action="Editer" products=true index=index}}
+	{{/autoForm}}
+</template>

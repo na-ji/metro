@@ -1,8 +1,8 @@
 <template name="caddieForm">
 	{{#if products }}
 		<br />
-		{{> afQuickField name='product' options=productChoices}}
-		{{> afQuickField name='quantity'}}
+		{{> afQuickField name=productName options=productChoices}}
+		{{> afQuickField name=quantityName}}
 	{{else}}
 		{{> afQuickField name='name'}}
 	{{/if}}

@@ -8,5 +8,17 @@ Template.caddieForm.helpers({
 		};
 
 		return choices;
+	},
+	productName: function() {
+		if (this.index !== undefined && this.index !== "none") {
+			return "products." + this.index + ".product";
+		}
+		return "product";
+	},
+	quantityName: function() {
+		if (this.index !== undefined && this.index !== "none") {
+			return "products." + this.index + ".quantity";
+		}
+		return "quantity";
 	}
 });
