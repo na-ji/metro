@@ -32,3 +32,6 @@ img.image-row + span {
 body {
 	background-color: #eeeeee;
 }
+tbody {
+	border-bottom: 1px solid #d0d0d0;
+}
