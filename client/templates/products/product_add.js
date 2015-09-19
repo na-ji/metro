@@ -1,6 +1,6 @@
 AutoForm.addHooks('insertProductForm', {
-	onSuccess: function(operation, result, template) {
+	onSuccess: function() {
 		Materialize.toast('Votre produit a bien été ajouté !', 4000);
-		Router.go("/products");
+		Router.go("productsList");
 	}
 });
