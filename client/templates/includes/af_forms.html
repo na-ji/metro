@@ -51,16 +51,17 @@
 <template name="afFileUpload_meteor">
 	<label class="label-reset">Photo</label>
 	<div class="form-group file-upload file-field input-field">
-		{{#if fileUpload}}
+		{{#if file}}
 			<div class="row">
 				<div class="col s12">
-					{{#with fileUpload}}
-						{{> Template.dynamic template=template data=data}}
-					{{/with}}
-					<br />
-					<a class="file-upload-clear waves-effect waves-light btn" file-input="{{name}}">
-						<i class="mdi-action-highlight-remove left"></i> Retirer
-					</a>
+					{{#if file.isUploaded}}
+						{{> Template.dynamic template=previewTemplate data=previewTemplateData}}
+						<div>
+							<a href="#" class="js-remove"><i class="fa fa-times"></i> Retirer</a>
+						</div>
+					{{else}}
+						<span>Envoi en cours...</span>
+					{{/if}}
 					<br />
 					<br />
 					<br />
@@ -70,14 +71,13 @@
 			<input class="file-path validate" type="text"/>
 			<div class="btn">
 				<span>FILE</span>
-				<input id="file-{{name}}" file-input="{{name}}" type="file" accept="{{accept}}" />
+				<input type="file" class="hidden js-file" accept="{{atts.accept}}">
 			</div>
 		{{/if}}
-		<!-- <div class="">{{> afQuickField name=name}}</div> -->
-		<input type="text" style="display:none;" data-cfs-collection="{{this.atts.collection}}" {{fileUploadAtts}} value="{{value}}">
+		<input type="hidden" class="js-value" value="{{value}}" data-schema-key="{{schemaKey}}">
 	</div>
 </template>
 
 <template name="fileThumbImg_meteor">
-	<img src="{{src}}" alt="" class="img-fileUpload-thumbnail img-thumbnail img-rounded">
+	<img src="{{url}}" alt="" class="img-fileUpload-thumbnail img-thumbnail img-rounded">
 </template>
