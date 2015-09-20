@@ -11,7 +11,6 @@ aldeed:autoform
 gildaspk:autoform-materialize
 aldeed:template-extension
 cfs:standard-packages
-cfs:filesystem
 yogiben:autoform-file
 reywood:publish-composite
 cfs:gridfs
