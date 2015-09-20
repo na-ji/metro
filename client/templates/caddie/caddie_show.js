@@ -1,8 +1,14 @@
 var products_list = {};
 
 function product(id) {
+	console.log(products_list);
+	console.log(Template.instance().data);
 	if (products_list[id] === undefined) {
-		products_list[id] = Products.findOne(id);
+		if (Template.instance().data.locked) {
+			products_list[id] = Template.instance().data.lockedProducts[id];
+		} else {
+			products_list[id] = Products.findOne(id);
+		}
 	}
 	return products_list[id];
 }
@@ -46,5 +52,28 @@ Template.caddieShow.helpers({
 			total += this.products[i].quantity * item.unitNumber;
 		};
 		return total;
+	}
+});
+
+Template.caddieShow.onDestroyed(function() {
+	products_list = {};
+
+	console.log(products_list);
+})
+
+Template.caddieShow.events({
+	'click #lockCaddie': function(e) {
+		console.log("click !");
+		console.log(this);
+		console.log(products_list);
+
+		if (!this.locked) {
+			Caddies.update(this._id, {
+				$set: {
+					locked         : true,
+					lockedProducts : products_list
+				}
+			});
+		}
 	}
 });
